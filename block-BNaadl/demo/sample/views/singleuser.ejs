@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Full details all articles</h1>
+    <h1><%= articles.title%></h1>
+    <h1><%= articles.description%></h1>
+    <h1><%= articles.tags%></h1>
+    <h1><%= articles.author%></h1>
+    <h1>Likes :<%= articles.likes%></h1>
+    <h1>Dislike:<%= articles.dislikes%></h1>
+    <div class="box">
+      <nav>
+        <a class="in" href="/article/likes/<%=articles._id %>">Likes</a>
+        <a class="de" href="/article/dislikes/<%=articles.id%>">Dislike</a>
+        <a class="edit" href="/article/<%=articles.id%>/edit">Edit</a>
+        <a class="delete" href="/article/<%=articles.id%>/delete">Delete</a>
+      </nav>
+    </div>
+  </body>
+</html>
