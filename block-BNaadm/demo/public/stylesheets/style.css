@@ -1,0 +1,249 @@
+body {
+  /* padding: 50px; */
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+  text-decoration: none;
+}
+
+.add{
+  display: flex;
+  justify-content: space-evenly;
+}
+.flex-70{
+  flex: 0 1 90%;
+  /* border: 2px solid red; */
+
+}
+.flex-30{
+  flex: 0 1 15%;
+  
+  /* border:2px solid ; */
+}
+h1{
+  text-align: center;
+}
+.heading{
+  font-size: 2rem;
+  background-color: cornflowerblue;
+  color: white;
+  font-weight: 600;
+  border: 2px soild coral;
+  box-shadow: 2px 2px 20px grey;
+  width: 20%;
+  margin: 0 auto;
+  padding: .5rem 1rem;
+}
+.add1{
+text-decoration: none;
+border: 2px solid grey;
+padding: .5rem;
+background-color: green;
+}
+.form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  flex-direction: column;
+  /* border: 2px solid cornflowerblue; */
+  /* width: 30%; */
+}
+.add-form{
+  border: 2px solid cornflowerblue;
+  padding: 1rem;
+  display: flex;
+  width: 30%;
+  flex-direction: column;
+}
+input{
+  margin: .5rem;
+  padding: .5rem;
+  font-size: 1rem;
+  text-transform: capitalize;
+  outline-color: coral;
+  /* width: 70%; */
+}
+.textarea{
+  width: 95%;
+  margin: 0 auto;
+  outline-color: coral;
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+.legend{
+margin: .5rem 0;
+font-size: 2rem;
+background-color: coral;
+color: white;
+width: 32%;
+text-align: center;
+padding: .5rem;
+}
+.box{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  width: 30%;
+
+  
+
+}
+.title{
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin: 0;
+  color: coral;
+  text-transform: capitalize;
+}
+.para{
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 0;
+  color: cornflowerblue;
+  text-transform: capitalize;
+}
+.likes{
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+.like{
+  background-color: green;
+  padding: .5rem;
+  color: white;
+  font-size: 1rem;
+}
+.dislike{
+  background-color: coral;
+  padding: .5rem;
+  color: white;
+  font-size: 1rem;
+}
+.edit{
+  background-color: blueviolet;
+  padding: .5rem;
+  color: white;
+  font-size: 1rem;
+}
+.delete{
+  background-color:red;
+  padding: .5rem;
+  color: white;
+  font-size: 1rem;
+}
+.li{
+  font-size: 1.4rem;
+}
+.uper-box{
+  display: flex;
+  justify-content: space-between;
+}
+.hr{
+  border-top: 2px dashed red;
+  margin: 1rem 0;
+}
+.comment-form{
+  display: flex;
+  flex-direction: column;
+ 
+  width: 30%;
+}
+.comment-textarea{
+  text-transform: capitalize;
+  /* font-size: 1.3rem; */
+  outline-color: coral;
+}
+.comment-input{
+  width: 14%;
+}
+.update{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  flex-direction: column;
+}
+.update-box{
+  border: 2px solid coral;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+.lege{
+  text-align: center;
+  background-color: cornflowerblue;
+  color: white;
+  margin: .5rem 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding: .5rem 0;
+}
+.update-input{
+  width: 60%;
+}
+.button{
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+}
+.edit-comments{
+  background-color: cornflowerblue;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: white;
+  border: 2px solid coral;
+  padding: .3rem;
+}
+.delete-comments{
+  background-color: red;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: white;
+  padding: .3rem;
+  border: 2px solid blueviolet;
+}
+.h3{
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+.comment-likes{
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: white;
+  padding: .3rem;
+  border: 2px solid blueviolet; 
+  background-color: green;
+}
+.blog-details{
+background-color: coral;
+color: white;
+font-size: 1.6rem;
+text-transform: capitalize;
+font-weight: 600;
+padding: .6rem 0;
+}
+.button-box{
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+}
+.title1{
+  background-color: green;
+  padding: .3rem;
+  font-size: 1.4rem;
+  color: coral;
+  margin: .5rem 0;
+}
+.home{
+  background-color: green;
+  padding: .3rem;
+  font-size: 1.4rem;
+  color: coral;
+  margin: .5rem 0; 
+}
