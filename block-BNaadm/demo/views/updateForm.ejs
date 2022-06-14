@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h2>hello world</h2> -->
+    <form action="/blog/<%=blog.id%>/edit" method="POST" class="form">
+        <legend class="legend">Blog Updated Form  </legend>
+        <div class="add-form">
+        <input  value="<%=blog.title%>" name="title" aria-placeholder="Enter"  type="text" placeholder="Enter Title">
+        <textarea class="textarea"  value="" name="description" id="" cols="20" rows="10" placeholder="Enter Description"><%=blog.description%></textarea>
+        <input  value="<%=blog.author%>" name="author" aria-placeholder="Enter"  type="text" placeholder="Enter Author">
+        <input  value=" <%=blog.tags%>" name="tags" aria-placeholder="Enter"  type="text" placeholder="Enter Tags">
+        <input type="submit" value="Add">
+    </div>
+    </form>
+</body>
+</html>

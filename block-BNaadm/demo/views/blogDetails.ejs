@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Document</title>
+</head>
+<body>
+<header ><h1 class="blog-details">Blog Details Page</h1>  
+<div class="button-box">
+    <a class="title1" href="/blog/alltitle">Title</a>
+    <a class="home" href="/blog">Home</a>
+</div>
+</header>
+
+    <div class="box">
+        <h2 class="title"> <%= blog.title%>   </h2>
+        <p class="para"> <%= blog.description%> </p>
+        <p class="para"><%= blog.author%></p>
+        <p class="para"><%= blog.tags%></p>
+        <p class="li"> likes:<%= blog.likes%> </p>
+    
+    </div>
+    <div class="likes">
+        <a class="like" href="/blog/<%=blog.id%>/likes">Likes</a>
+        <a class="dislike"  href="/blog/<%=blog.id%>/dislikes">DisLikes</a>
+        <a class="edit" href="/blog/<%=blog.id%>/edit">Edit</a>
+        <a class="delete" href="/blog/<%=blog.id%>/delete">Delete</a>
+    </div>
+    <hr class="hr">
+
+    <form class="comment-form" action="/blog/<%=blog.id%>" method="POST">
+        <textarea class="comment-textarea" name="content" id="" cols="30" rows="10" placeholder="Comments"></textarea>
+        <input class="comment-input" type="submit" value="Add">
+    </form>
+
+    <h2>Comments </h2>
+    <% comments.forEach(elm=>{%>
+        <h3 class="h3"><%= elm.content%></h3>
+        <h3>likes: <%= elm.likes%></h3>
+<div class="button">
+    <a class="edit-comments" href="/comment/<%= elm.id%>/edit">Edit</a>
+    <a class="delete-comments" href="/comment/<%= elm.id%>/delete">Delete</a>
+    <a class="comment-likes" href="/comment/<%= elm.id%>/likes"> Likes</a>
+   </div>
+   <% })%>
+ 
+   
+</body>
+</html>
