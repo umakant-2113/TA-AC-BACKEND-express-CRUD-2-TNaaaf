@@ -19,34 +19,28 @@
 
     <main  class="main">
 
-<div class=" flex-100">
-    <%book.forEach(book=>{%>
-        <div class="flex-30">
-            <div class="back">
-                <h2><%= book.title%>     </h2>
-                <a class="back" href="/books"> back</a>
-            </div>
-         
-        
-            <p><%= book.summary%>     </p>
-            <p><%= book.pages%>     </p>
-            <p><%= book.publication%>     </p>
-            <p><%= book.catogery%>     </p>
-            <img class="full-width"  src="/images/<%= book.cover_image%>" alt="">
-            <p><%= book.author%>     </p>
-            <p><%= book.email%>     </p>
-            <p><%= book.countery%>     </p>
-            <div class="edit">
-                <a class="btn-edit" href=""> Edit</a>
-                <a class="btn-delete" href="">Delete</a>
-            </div>
+
+           
+         <div class="full-details">
+          <a href="/"> Back</a>
+          <h2><%= book.title%></h2>
+          <p><%= book.summary%>     </p>
+          <p><%= book.pages%>     </p>
+          <p><%= book.publication%>     </p>
+          <p><%= book.catogery%>     </p>
+          <img class="full-width"  src="/images/<%= book.cover_image%>" alt="">
+          <p><%= book.author%>     </p>
+          <p><%= book.email%>     </p>
+          <p><%= book.countery%>     </p>
+          <div class="edit">
+              <a class="btn-edit" href="/books/<%=book.id %>/edit"> Edit</a>
+              <a class="btn-delete" href="/books/<%=book.id %>/delete">Delete</a>
+          </div>
+         </div>
 
 
-        </div>
-    
-    
-<%})%> 
-</div>
+
+
     </main>
   </body>
 </html>

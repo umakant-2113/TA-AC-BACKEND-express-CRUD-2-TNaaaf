@@ -20,9 +20,15 @@
       <a href="/">Home</a>
       <a href="/books/new">Add Book</a>
     </div>
-    <% book.forEach(book=>{%>
-    <img src="/image/<%= book.cover_image%>" alt="">
-    <h2 class="title"><a href="/books/details"> <%= book.title%> </a> </h2>
-    <% })%>
+  
+    <div class=" flex-100">
+      <%book.forEach(book=>{%>
+          <div class="flex-30">
+            <img class="full-width"  src="/images/<%= book.cover_image%>" alt="">
+            <h2 class="title"><a href="/books/details"> <%= book.title%> </a> </h2>
+            <a class="show" href="books/<%= book.id%>/details">  Show</a>
+  </div>
+  <%})%> 
+  </div>
   </body>
 </html>

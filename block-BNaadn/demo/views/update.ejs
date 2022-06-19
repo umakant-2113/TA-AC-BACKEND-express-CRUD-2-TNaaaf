@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <div >
+        <form
+        action="/books/<%=book.id%>/edit"
+        method="POST"
+        class="update"
+      >
+        <legend class="legend">Update  Book In BookStore</legend>
+        <div class="form-div">
+          <input
+            class="input"
+            placeholder="Enter Title"
+            name="title"
+            type="text"
+            value="<%=book.title%>"
+          />
+          <textarea
+            name="summary"
+            id=""
+            cols="32"
+            rows="10"
+            placeholder="Enter Summary"
+          >  <%= book.summary%>  </textarea>
+          <input
+            class="input"
+            placeholder="Enter pages"
+            name="pages"
+            type="text"
+            value="<%=book.pages%>"
+          />
+          <input
+            class="input"
+            placeholder="Enter publication"
+            name="publication"
+            type="text"
+    value="<%= book.publication%>"
+          />
+          <input
+            class="input"
+            placeholder="Enter catogrey"
+            name="category"
+            type="text"
+            value="<%= book.category%>"
+          />
+          <div class="author-div">
+              <legend class="author">
+                  Author Details
+              </legend>
+              <input class="input" type="text" name="author" value="<%=book.author%>" placeholder="Author name">
+              <input class="input" type="email" name="email" value="<%=book.email%>" placeholder="Email">
+              <input class="input"  type="text" name="countery" value="<%= book.countery%>"  placeholder="Country Name">
+          </div>
+          <input class="button" type="submit" value="Add" />
+        </div>
+      </form>
+    </div>
+
+</body>
+</html>
