@@ -37,16 +37,47 @@ router.get('/new', (req, res, next) => {
 router.post("/new",upload.single("cover_image",),(req,res,next)=>{
   req.body.cover_image=req.file.filename;
   Book.create(req.body,(err,book)=>{
-res.redirect("/")
+res.redirect("/books")
   })
 })
 
 
-router.get("/details",(req,res,next)=>{
-  Book.find({},(err,book)=>{
+router.get("/:id/details",(req,res,next)=>{
+  let id= req.params.id;
+  Book.findById(id,(err,book)=>{
     if(err) return next(err);
-    res.render("details")
+    res.render("details",{book})
   })
 })
+
+// edit book
+
+router.get("/:id/edit",(req,res,next)=>{
+  let id=req.params.id;
+  Book.findById(id,(err,book)=>{
+    res.render("update",{book})
+  })
+})
+
+router.post("/:id/edit",(req,res,next)=>{
+  let id=req.params.id;
+  Book.findByIdAndUpdate(id ,req.body ,(err,book)=>{
+    console.log(err,book)
+    if (err) return next(err);
+    res.redirect("/books/"+id+"/details")
+  })
+})
+
+router.get("/:id/delete",(req,res,next)=>{
+  let id=req.params.id;
+Book.findByIdAndDelete(id,(err,book)=>{
+  if(err) return next(err);
+  res.redirect("/books")
+})
+})
+
+
+
+
 
 module.exports = router;
