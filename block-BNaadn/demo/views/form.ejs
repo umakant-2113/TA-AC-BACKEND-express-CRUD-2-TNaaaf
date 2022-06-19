@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Charis+SIL:ital@1&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="box">
+      <a class="add" href="/"> Home</a>
+      <a class="Title" href="/books"> Go Title</a>
+    </div>
+    <form
+      action="/books/new"
+      method="POST"
+      enctype="multipart/form-data"
+      class="form-first"
+    >
+      <legend class="legend">Add New Book In BookStore</legend>
+      <div class="form-div">
+        <input
+          class="input"
+          placeholder="Enter Title"
+          name="title"
+          type="text"
+        />
+        <textarea
+          name="summary"
+          id=""
+          cols="32"
+          rows="10"
+          placeholder="Enter Summary"
+        ></textarea>
+        <input
+          class="input"
+          placeholder="Enter pages"
+          name="pages"
+          type="text"
+        />
+        <input
+          class="input"
+          placeholder="Enter publication"
+          name="publication"
+          type="text"
+        />
+        <input
+          class="input"
+          placeholder="Enter catogrey"
+          name="category"
+          type="text"
+        />
+        <input type="file" name="cover_image" placeholder="Image" />
+        <div class="author-div">
+            <legend class="author">
+                Author Details
+            </legend>
+            <input class="input" type="text" name="author" placeholder="Author name">
+            <input class="input" type="email" name="email" placeholder="Email">
+            <input class="input"  type="text" name="countery" placeholder="Country Name">
+        </div>
+        <input class="button" type="submit" value="Add" />
+      </div>
+    </form>
+  </body>
+</html>

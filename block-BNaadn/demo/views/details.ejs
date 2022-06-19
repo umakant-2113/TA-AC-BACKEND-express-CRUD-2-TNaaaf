@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Charis+SIL:ital@1&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header> 
+        <h1 class="details-page"> Full Summary Of Book</h1></header>
+
+    <main  class="main">
+
+
+           
+         <div class="full-details">
+          <a href="/"> Back</a>
+          <h2><%= book.title%></h2>
+          <p><%= book.summary%>     </p>
+          <p><%= book.pages%>     </p>
+          <p><%= book.publication%>     </p>
+          <p><%= book.catogery%>     </p>
+          <img class="full-width"  src="/images/<%= book.cover_image%>" alt="">
+          <p><%= book.author%>     </p>
+          <p><%= book.email%>     </p>
+          <p><%= book.countery%>     </p>
+          <div class="edit">
+              <a class="btn-edit" href="/books/<%=book.id %>/edit"> Edit</a>
+              <a class="btn-delete" href="/books/<%=book.id %>/delete">Delete</a>
+          </div>
+         </div>
+
+
+
+
+    </main>
+  </body>
+</html>
